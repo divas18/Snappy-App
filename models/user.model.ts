@@ -1,4 +1,4 @@
-import mongoose, { Document } from "mongoose";
+import mongoose, { Document, Model } from "mongoose";
 
 export interface UserInterface {
     username: string,
@@ -7,12 +7,13 @@ export interface UserInterface {
     profilePhoto: string
 }
 
+// handling ts for timestamp as well
 export interface UserDocument extends UserInterface, Document {
     createdAt: Date,
     updatedAt: Date
 }
 
-const userModel = new mongoose.Schema({
+const userModel = new mongoose.Schema<UserDocument>({
     username: {
         type: String,
         required: true,
@@ -31,6 +32,6 @@ const userModel = new mongoose.Schema({
         type: String,
         default: ""
     }
-}, { timestamps: true })
+}, { timestamps: true });
 
-export const User = mongoose?.models?.User || mongoose?.model('UserSchema', userModel)
+export const User: Model<UserDocument> = mongoose?.models?.User || mongoose.model("User", userModel);

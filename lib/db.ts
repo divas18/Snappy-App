@@ -11,7 +11,7 @@ const connectDatabase = async () => {
     try {
         let res = await mongoose.connect(process.env.MONGO_URI!);
         isConnected = res.connection
-        console.log("MomgoDb connected successfully");
+        console.log("MongoDb connected successfully");
         return isConnected;
     } catch (err) {
         console.error(err);
