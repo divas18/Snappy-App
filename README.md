@@ -36,11 +36,27 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
+## Project Development Steps
+
+1. npx create-next-app@latest
+
+2. setup for shadcn ui, by simply following the Docs. shadcn ui basically help to develop component quickly, it provides reusable components that can be customizable too. (https://ui.shadcn.com/docs/components)
+
+3. We use react-icons - https://react-icons.github.io/react-icons/ for various icons.
+
+4. Here, mongoose for Database. Setup by using New Project & then general setup.
+
+5. For authentication we use auth.js (https://authjs.dev/), and follows the guided documentation. Here auth.ts is responsible for whole lot of things for authentications. auth.ts file has callback which contains logic for signIn, signUp.
+
+6. for setup and authentication, we use github as provider by grabbing the clientId & clientSecret.
+
+7. To store the data of user after signUp, chats and messages, we need to create Models of user, chat and message.
+
 
 ## use ui.shadcn.com components 
 
 the easiest way to use the component that can be customized too, https://ui.shadcn.com/docs/components
 
-## https://authjs.dev/
+## authjs.dev
 
-for authentication we use authjs.dev 
+for authentication we use https://authjs.dev/ 
