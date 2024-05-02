@@ -53,6 +53,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 7. To store the data of user after signUp, chats and messages, we need to create Models of user, chat and message.
 
 
+We use Middleware, when user successfully authenticated using any provider (github) then redirects user to particular webpage.
+
+Middleware allows you to run code before a request is completed. Then, based on the incoming request, you can modify the response by rewriting, redirecting, modifying the request or response headers, or responding directly.
+
+
 ## use ui.shadcn.com components 
 
 the easiest way to use the component that can be customized too, https://ui.shadcn.com/docs/components
